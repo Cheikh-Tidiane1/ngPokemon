@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PokeListService } from './poke-list.service';
+import {BorderCardDirective} from './border-card.directive'
 import { Pokemon } from './pokemon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, BorderCardDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
