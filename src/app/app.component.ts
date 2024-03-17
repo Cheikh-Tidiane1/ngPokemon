@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { PokeListService } from './poke-list.service';
 import {BorderCardDirective} from './border-card.directive'
 import { Pokemon } from './pokemon';
-
+import { DatePipe} from '@angular/common';
+import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, BorderCardDirective],
+  imports: [RouterOutlet, BorderCardDirective,DatePipe,PokemonTypeColorPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

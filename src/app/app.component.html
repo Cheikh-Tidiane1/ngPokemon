@@ -12,7 +12,12 @@
           <div class="card-content">
             <p>{{ poke.name }}</p>
             <p>
-              <small>{{ poke.created }}</small>
+              <small>{{ poke.created | date:'dd/MM/yyyy'}}</small>
+              @for(type of poke.types; track type){
+                <span class="{{type | pokemonTypeColor}}">
+                  {{type}}
+                </span>
+              }
             </p>
           </div>
         </div>
