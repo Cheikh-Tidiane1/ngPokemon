@@ -26,8 +26,7 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png',
       types: ['Feu'],
       created: new Date(),
-      color: 'orange'
-
+      color: 'orange',
     },
     {
       id: 3,
@@ -38,8 +37,7 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png',
       types: ['Eau'],
       created: new Date(),
-      color: 'lightblue'
-
+      color: 'lightblue',
     },
     {
       id: 4,
@@ -50,8 +48,7 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/013.png',
       types: ['Insecte', 'Poison'],
       created: new Date(),
-      color: 'beige'
-
+      color: 'beige',
     },
     {
       id: 5,
@@ -62,8 +59,7 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/016.png',
       types: ['Normal', 'Vol'],
       created: new Date(),
-      color: 'grey'
-
+      color: 'grey',
     },
     {
       id: 6,
@@ -74,8 +70,7 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/019.png',
       types: ['Normal'],
       created: new Date(),
-      color: 'beige'
-
+      color: 'beige',
     },
     {
       id: 7,
@@ -86,8 +81,7 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/021.png',
       types: ['Normal', 'Vol'],
       created: new Date(),
-      color: 'lightgoldenrodyellow'
-
+      color: 'lightgoldenrodyellow',
     },
     {
       id: 8,
@@ -98,8 +92,7 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/023.png',
       types: ['Poison'],
       created: new Date(),
-      color: 'purple'
-
+      color: 'purple',
     },
     {
       id: 9,
@@ -110,8 +103,7 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png',
       types: ['Electrik'],
       created: new Date(),
-      color: 'yellow'
-
+      color: 'yellow',
     },
     {
       id: 10,
@@ -122,8 +114,7 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/027.png',
       types: ['Normal'],
       created: new Date(),
-      color: 'saddlebrown'
-
+      color: 'saddlebrown',
     },
     {
       id: 11,
@@ -134,8 +125,7 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/035.png',
       types: ['Fée'],
       created: new Date(),
-      color: 'pink'
-
+      color: 'pink',
     },
     {
       id: 12,
@@ -146,8 +136,11 @@ export class PokeListService {
         'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/037.png',
       types: ['Feu'],
       created: new Date(),
-      color: 'beige'
-
+      color: 'beige',
     },
   ];
+
+  getPokemon(id: number) {
+    return this.pokemons.find((p) => p.id == id);
+  }
 }
