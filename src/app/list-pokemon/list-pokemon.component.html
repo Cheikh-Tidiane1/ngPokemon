@@ -1,26 +1,31 @@
 <div class="container">
-    <div class="row">
-      @for(poke of pokemonList; track poke.id){
-      <div class="col m4 s6">
-        <div class="card horizontal" pkmBorderCard="{{poke.color}}">
-          <div class="card-image">
-            <img [src]="poke.picture" alt="CarPokemon"/>
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <p>{{ poke.name }}</p>
-              <p>
-                <small>{{ poke.created | date:'dd/MM/yyyy'}}</small>
-                @for(type of poke.types; track type){
-                  <span class="{{type | pokemonTypeColor}}">
-                    {{type}}
-                  </span>
-                }
-              </p>
-            </div>
+  <div class="row">
+    @for(poke of pokemonList; track poke.id){
+    <div class="col m4 s6">
+      <div
+        class="card horizontal"
+        pkmBorderCard="{{ poke.color }}"
+        (click)="goToPokemon(poke)"
+        [ngStyle]="{ cursor: 'pointer' }"
+      >
+        <div class="card-image">
+          <img [src]="poke.picture" alt="CarPokemon" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>{{ poke.name }}</p>
+            <p>
+              <small>{{ poke.created | date : "dd/MM/yyyy" }}</small>
+              @for(type of poke.types; track type){
+              <span class="{{ type | pokemonTypeColor }}">
+                {{ type }}
+              </span>
+              }
+            </p>
           </div>
         </div>
       </div>
-      }
     </div>
+    }
   </div>
+</div>
