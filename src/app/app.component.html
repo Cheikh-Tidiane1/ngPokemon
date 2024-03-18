@@ -4,9 +4,9 @@
   <div class="row">
     @for(poke of pokemonList; track poke.id){
     <div class="col m4 s6">
-      <div class="card horizontal" pkmBorderCard>
+      <div class="card horizontal" pkmBorderCard="{{poke.color}}">
         <div class="card-image">
-          <img [src]="poke.picture" alt="" />
+          <img [src]="poke.picture" alt="CarPokemon"/>
         </div>
         <div class="card-stacked">
           <div class="card-content">
