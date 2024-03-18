@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { ListPokemonComponent } from './list-pokemon/list-pokemon.component';
 import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   {
@@ -13,6 +14,6 @@ export const routes: Routes = [
     component: DetailPokemonComponent,
     title: 'Detail Pokémon',
   },
-  //   { path: '', redirectTo: 'pokemons', pathMatch: 'full' },
   { path: '', component: ListPokemonComponent, title: 'Liste Pokémons' },
+  { path: '**', component: PageNotFoundComponent, title: 'Oops Error 404 !' }
 ];
