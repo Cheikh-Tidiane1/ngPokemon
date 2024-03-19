@@ -5,6 +5,28 @@ import { Pokemon } from './pokemon';
 })
 export class PokeListService {
   constructor() {}
+ 
+
+  getPokemon(id: number) {
+    return this.pokemons.find((p) => p.id == id);
+  }
+
+  getPokemonTypeList(): string[] {
+    return [
+      'Plante',
+      'Feu',
+      'Eau',
+      'Insecte',
+      'Normal',
+      'Electrik',
+      'Poison',
+      'Fée',
+      'Vol',
+      'Combat',
+      'Psy'
+    ]
+  }
+
   pokemons: Pokemon[] = [
     {
       id: 1,
@@ -139,8 +161,4 @@ export class PokeListService {
       color: 'beige',
     },
   ];
-
-  getPokemon(id: number) {
-    return this.pokemons.find((p) => p.id == id);
-  }
 }
