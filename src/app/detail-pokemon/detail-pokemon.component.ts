@@ -21,7 +21,7 @@ export class DetailPokemonComponent implements OnInit {
   ngOnInit(): void {
     const idPokemon = this.route.snapshot.params['id']
     if(idPokemon){
-      this.pokemon = this.listService.getPokemonById(idPokemon)!
+      this.listService.getPokemonById(idPokemon).subscribe(pokemon => this.pokemon = pokemon)
     }
   }
 
