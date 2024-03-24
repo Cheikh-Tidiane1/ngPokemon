@@ -50,7 +50,7 @@
         <div class="card-action">
           <a routerLink="">Retour</a>
           <a routerLink="/edit/pokemon/{{pokemon.id}}">Editer</a>
-          <a href="#">Supprimer</a>
+          <a (click)="deletePokemon(pokemon)">Supprimer</a>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { Pokemon } from './pokemon';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { catchError, tap, of } from 'rxjs';
+import { response } from 'express';
 @Injectable({
   providedIn: 'root',
 })
@@ -30,6 +31,13 @@ export class PokeListService {
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null))
     );
+  }
+
+  deletePokemonById(pokemonId: number): Observable<null> {
+    return this.http.delete<Pokemon>(`api/pokemons/${pokemonId}`).pipe(
+      tap((response) => this.log(response)),
+      catchError((error) => this.handleError(error, null))
+    )
   }
   private log(response: any) {
     return console.table(response);
