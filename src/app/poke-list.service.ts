@@ -3,7 +3,6 @@ import { Pokemon } from './pokemon';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { catchError, tap, of } from 'rxjs';
-import { response } from 'express';
 @Injectable({
   providedIn: 'root',
 })
@@ -40,7 +39,7 @@ export class PokeListService {
     );
   }
 
-  addPokemon(pokemon: Pokemon): Observable<null> {
+  addPokemon(pokemon: Pokemon): Observable<Pokemon> {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };

@@ -4,12 +4,12 @@ import { BorderCardDirective } from '../border-card.directive';
 import { Pokemon } from '../pokemon';
 import { DatePipe } from '@angular/common';
 import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { NgStyle } from '@angular/common';
 @Component({
   selector: 'app-list-pokemon',
   standalone: true,
-  imports: [BorderCardDirective, DatePipe, PokemonTypeColorPipe, NgStyle],
+  imports: [BorderCardDirective, DatePipe, PokemonTypeColorPipe, NgStyle,RouterLink],
   templateUrl: './list-pokemon.component.html',
   styleUrl: './list-pokemon.component.css',
 })
