@@ -48,6 +48,14 @@ export class PokeListService {
       catchError((error) => this.handleError(error, null))
     );
   }
+
+  searchPokemonList(term: string): Observable<Pokemon[]> {
+    return this.http.get<Pokemon[]>(`api/pokemons/?name=${term}`).pipe(
+      tap((response) => this.log(response)),
+      catchError((error) => this.handleError(error, []))
+    );
+  }
+
   private log(response: any) {
     return console.table(response);
   }
