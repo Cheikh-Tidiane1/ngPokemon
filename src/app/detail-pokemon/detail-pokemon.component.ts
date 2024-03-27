@@ -5,14 +5,15 @@ import { Pokemon } from '../pokemon';
 import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
 import { DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { LoaderComponent } from "../loader/loader.component";
 
 
 @Component({
-  selector: 'app-detail-pokemon',
-  standalone: true,
-  imports: [PokemonTypeColorPipe,DatePipe,RouterLink],
-  templateUrl: './detail-pokemon.component.html',
-  styleUrl: './detail-pokemon.component.css',
+    selector: 'app-detail-pokemon',
+    standalone: true,
+    templateUrl: './detail-pokemon.component.html',
+    styleUrl: './detail-pokemon.component.css',
+    imports: [PokemonTypeColorPipe, DatePipe, RouterLink, LoaderComponent]
 })
 export class DetailPokemonComponent implements OnInit {
   pokemon: Pokemon 

@@ -19,10 +19,7 @@ import { PokeListService } from '../poke-list.service';
   styleUrl: './search-pokemon.component.css',
 })
 export class SearchPokemonComponent implements OnInit {
-  /*
-  La classe Subject appartient a rxjs: 
-  elle permet de stocker les recherches successives de l'utilisateur
-  C’est une classe de rxjs qui stocke un flux*/
+  
   searchTerms = new Subject<string>();
   pokemons$: Observable<Pokemon[]>;
   constructor(

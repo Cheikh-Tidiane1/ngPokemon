@@ -5,4 +5,8 @@
 </p>
 } @if(pokemon){
 <app-pokemon-form [pokemon]="pokemon"></app-pokemon-form>
+}@else {
+<h4 class="center">
+  <app-loader></app-loader>
+</h4>
 }

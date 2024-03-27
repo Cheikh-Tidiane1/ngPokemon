@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
     <app-search-pokemon></app-search-pokemon>
-    @for(poke of pokemonList; track poke.id){
+    @if(pokemonList){
+       @for(poke of pokemonList; track poke.id){
     <div class="col m4 s6">
       <div
         class="card horizontal"
@@ -18,7 +19,7 @@
             <p>
               <small>{{ poke.created | date : "dd/MM/yyyy" }}</small>
               @for(type of poke.types; track type){
-                <br>
+              <br />
               <span class="{{ type | pokemonTypeColor }}">
                 {{ type }}
               </span>
@@ -28,6 +29,11 @@
         </div>
       </div>
     </div>
+    } 
+  }@else {
+    <h4 class="center">
+      <app-loader></app-loader>
+    </h4>
     }
   </div>
 </div>
@@ -37,5 +43,5 @@
   style="position: fixed; bottom: 25px; right: 25px; font-size: 2vh"
   routerLink="pokemons/add"
 >
-  ➕ 
+  ➕
 </a>
