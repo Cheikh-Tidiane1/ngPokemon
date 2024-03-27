@@ -4,7 +4,7 @@ import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.componen
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 import { AddPokemonComponent } from './add-pokemon/add-pokemon.component';
-import { authGuard } from './auth.guard';
+import { authGuard } from './Guard/auth.guard';
 
 export const routes: Routes = [
   {
