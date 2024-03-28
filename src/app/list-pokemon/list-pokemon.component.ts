@@ -25,4 +25,8 @@ export class ListPokemonComponent implements OnInit {
   goToPokemon(pokemon: Pokemon) {
     this.router.navigate(['pokemons', pokemon.id]);
   }
+
+  goToAdd(){
+    
+  }
 }

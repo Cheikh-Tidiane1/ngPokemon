@@ -7,7 +7,7 @@ export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
 
   if (!authService.isLoggedIn) {
-    router.navigate(['router']);
+    router.navigate(['pokemons']);
   }
   return true;
 };

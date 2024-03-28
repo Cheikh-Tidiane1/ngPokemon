@@ -4,3 +4,10 @@
     /* flex-direction: row; */
     /* justify-content: space-between; */
 }
+
+.logout{
+    cursor: pointer;
+    font-size: 19px;
+    margin-left: 10px;
+    font-weight: 500;
+}

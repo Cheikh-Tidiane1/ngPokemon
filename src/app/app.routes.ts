@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 import { AddPokemonComponent } from './add-pokemon/add-pokemon.component';
 import { authGuard } from './Guard/auth.guard';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   {
@@ -31,6 +32,19 @@ export const routes: Routes = [
     title: 'Detail Pokémon',
     canActivate: [authGuard],
   },
-  { path: '', component: ListPokemonComponent, title: 'Liste Pokémons' },
-  { path: '**', component: PageNotFoundComponent, title: 'Oops Error 404 !' },
+  {
+    path: '',
+    redirectTo: 'login',
+    title: 'Connexion',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    title: 'Connexion',
+  },
+  { path: '**', 
+  component: PageNotFoundComponent, 
+  title: 'Oops Error 404 !' 
+  }
 ];

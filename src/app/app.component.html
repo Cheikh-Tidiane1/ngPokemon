@@ -1,10 +1,11 @@
 <nav>
-    <div class="nav-wrapper cyan">
-        <a routerLink="" class="brand-logo center">
-            Pokédex
-        </a>
-    </div>
+  <div class="nav-wrapper cyan">
+    <a routerLink="/pokemons" class="brand-logo center"> Pokédex </a>
+    @if(auth.isLoggedIn){
+    <a (click)="logOut()" class="logout">Se déconnecter</a>
+
+    }
+  </div>
 </nav>
 
 <router-outlet></router-outlet>
-
